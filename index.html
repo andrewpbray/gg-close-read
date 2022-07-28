@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>gg-close-read</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="gg-close-read_files/libs/clipboard/clipboard.min.js"></script>
+<script src="gg-close-read_files/libs/quarto-html/quarto.js"></script>
+<script src="gg-close-read_files/libs/quarto-html/popper.min.js"></script>
+<script src="gg-close-read_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="gg-close-read_files/libs/quarto-html/anchor.min.js"></script>
+<link href="gg-close-read_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="gg-close-read_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="gg-close-read_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="gg-close-read_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="gg-close-read_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+
+<div class="columns column-page">
+<div class="column" style="width:35%;">
+<section id="a-grammar-of-graphics" class="level1">
+<h1>A Grammar of Graphics</h1>
+<section id="a-close-read-of-a-scatterplot" class="level2">
+<h2 class="anchored" data-anchor-id="a-close-read-of-a-scatterplot">A close read of a scatterplot</h2>
+<p><span style="font-size: .7em">By Andrew Bray</span></p>
+<div>
+<p><br>
+</p>
+</div>
+<p>What a lovely graphics this is,</p>
+<p>with its three colors</p>
+<p>and dots all over the place.</p>
+<p>I wonder: how was this made?</p>
+</section>
+</section>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="padding:20px; position:sticky;top:50px;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="gg-close-read_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div>
+</div>
+<div class="columns column-page">
+<div class="column" style="width:35%;">
+<p>The one true source.</p>
+<p>Here is the aesthetic mapping. In time this will code highlight!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan rhoncus turpis, id condimentum augue dignissim vel. Suspendisse varius ex nec ligula dictum, vel vestibulum felis bibendum. Cras id mauris posuere, tempus quam at, vehicula eros. Mauris lobortis ante at dapibus blandit. Praesent hendrerit purus quis urna auctor congue. Etiam ut purus mattis, fringilla magna ac, rhoncus enim. Maecenas luctus turpis nisl, sit amet efficitur mauris viverra vel. In dignissim vehicula nunc, vel scelerisque ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla ac pulvinar justo. Sed quis felis odio. Aliquam erat volutpat. Duis ornare ligula tincidunt, volutpat erat in, tristique enim. Nullam id neque sed odio consectetur imperdiet. Cras non malesuada enim, eget hendrerit nunc.</p>
+<p>Suspendisse at diam a purus dictum bibendum. Sed eu volutpat sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque at porttitor leo. Mauris laoreet nibh arcu, hendrerit posuere quam auctor eget. Quisque vulputate felis et bibendum dapibus. Ut varius in risus nec finibus. Sed vitae nisl in nisl gravida consectetur. Maecenas ac libero non arcu ultricies porta non sit amet lorem.</p>
+<p>Cras ac euismod quam. Proin tempor hendrerit ullamcorper. Aliquam eu elementum neque. Nunc purus dui, fringilla quis pretium vitae, accumsan eget massa. Pellentesque dignissim justo nec velit ullamcorper accumsan. Proin ultrices nisi ac convallis varius. Morbi at leo nisl. Nam condimentum quis mi sed ultricies. Sed vel diam dictum, scelerisque enim sit amet, feugiat nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean at tortor vel ipsum suscipit porta.</p>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="padding:20px; position:sticky;top:50px;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Bill Length"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Flipper Length"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">Species =</span> <span class="st">"Species"</span>) <span class="sc">+</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<!-- ::::: -->
+<!-- # Sticky overlays -->
+<!-- The other common style is to have some full-width content stick but only cover part of the page. -->
+<!-- For this, we'll need a parent to be the start/end of the sticky zone (equivalent to our `.columns` before). In this case, because I've created a heading in the next section, Quarto automatically puts it and the content below it in a `<section>`, so there's no need to add another wrapper. -->
+<!-- We'll also need a container for our hero image that has: -->
+<!-- * `position:sticky` -->
+<!-- * `top: 0` will make it stick once the top of the section hits the top of the screen (so you won't see content sneaking past up the top) -->
+<!-- * `background-image: url(...)` loads the image into it, and -->
+<!-- * `background-size: cover` appropriately sizes it for all screens -->
+<!-- * `height: 60vh` sizes it to 60% of the screen height, leaving 40% for the text underneath. -->
+<!--   - (You could set it to `100vh` if you just wanted the content to be the whole jam, but since our sticky content isn't _doing_ anything yet, I think that's a bad idea. You typically want people to see _something_ happening when they scroll!) -->
+<!-- * I've also given it Quarto's `.column-screen` class to make it stretch across the screen. -->
+<!-- Let's see how it looks! -->
+<!-- ## Demo: sticky overlay -->
+<!-- ::: {.column-screen style="background-image:url(https://unsplash.com/photos/KPaSCpklCZw/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NHx8bGlnaHRob3VzZXxlbnwwfHx8fDE2NTM0OTMzOTE&force=true); background-size: cover; height: 60vh; position: sticky; top: 0; "} -->
+<!-- ::: -->
+<!-- _(This lighthouse photo is by [Everaldo Coelho](https://unsplash.com/photos/KPaSCpklCZw) on Unsplash!)_ -->
+<!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan rhoncus turpis, id condimentum augue dignissim vel. Suspendisse varius ex nec ligula dictum, vel vestibulum felis bibendum. Cras id mauris posuere, tempus quam at, vehicula eros. Mauris lobortis ante at dapibus blandit. Praesent hendrerit purus quis urna auctor congue. Etiam ut purus mattis, fringilla magna ac, rhoncus enim. Maecenas luctus turpis nisl, sit amet efficitur mauris viverra vel. In dignissim vehicula nunc, vel scelerisque ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla ac pulvinar justo. Sed quis felis odio. Aliquam erat volutpat. Duis ornare ligula tincidunt, volutpat erat in, tristique enim. Nullam id neque sed odio consectetur imperdiet. Cras non malesuada enim, eget hendrerit nunc. -->
+<!-- Suspendisse at diam a purus dictum bibendum. Sed eu volutpat sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque at porttitor leo. Mauris laoreet nibh arcu, hendrerit posuere quam auctor eget. Quisque vulputate felis et bibendum dapibus. Ut varius in risus nec finibus. Sed vitae nisl in nisl gravida consectetur. Maecenas ac libero non arcu ultricies porta non sit amet lorem. -->
+<!-- Cras ac euismod quam. Proin tempor hendrerit ullamcorper. Aliquam eu elementum neque. Nunc purus dui, fringilla quis pretium vitae, accumsan eget massa. Pellentesque dignissim justo nec velit ullamcorper accumsan. Proin ultrices nisi ac convallis varius. Morbi at leo nisl. Nam condimentum quis mi sed ultricies. Sed vel diam dictum, scelerisque enim sit amet, feugiat nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean at tortor vel ipsum suscipit porta. -->
+<!-- ## Review -->
+<!-- This works great! -->
+<!-- Since this is all just CSS and both styles are structured very similarly, you could choose to have _both_ options depending on screen size (so overlay at mobile widths and columns at desktop sizes). -->
+<!-- But so far, nothing's _moving_ or _changing_. We'll need some JavaScript for that. -->
+<!-- # Using `scrollama.js` -->
+<!-- The idea with Scrollama is that it [keeps an eye on our scrolling](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) tells us when targeted objects are visible. -->
+<!-- This can achieve a variety of effects---not just the sticky effects we've used above! As well as using sticky patterns, it can draw attention to elements as they scroll in. -->
+<!-- This isn't an entirely JS-free endeavour, unfortunately. Once we've imported the library, we still need to: -->
+<!-- 1. Use a `setup` function to tell scrollama which elements to target (let's say, anything with the `.step` class) -->
+<!-- 2. Give it event handlers: functions that will run when something enters or exits. -->
+<!--   - We need to define two event handlers; one for elements entering the view (`onStepEnter`) and another for them leaving the view (`onStepExit`). -->
+<!--   - To start, let's keep it simple(r) and have them just apply or remove a CSS class, `.is-active`. (We'll add some CSS style to make them purple when they have this class!) -->
+<!-- # Demo: A flashy series of boxes -->
+<!-- ```{ojs} -->
+<!-- //| output: false -->
+<!-- // import and instantiate the scrollama -->
+<!-- scrollama = require("scrollama@3.1.1") -->
+<!-- scroller = scrollama(); -->
+<!-- // initialise the library and pass event handlers to  -->
+<!-- scroller -->
+<!--   .setup({ -->
+<!--     step: ".step", -->
+<!--   }) -->
+<!--   .onStepEnter((response) => { -->
+<!--     // the box is passed to this function so we can change it! -->
+<!--     console.log("Enter triggered") -->
+<!--     console.log(response) -->
+<!--     // { element, index, direction } -->
+<!--     response.element.classList.add("is-active"); -->
+<!--   }) -->
+<!--   .onStepExit((response) => { -->
+<!--     console.log("Exit triggered") -->
+<!--     console.log(response) -->
+<!--     // { element, index, direction } -->
+<!--     response.element.classList.remove("is-active"); -->
+<!--   }); -->
+<!-- ``` -->
+<!-- ```{=html} -->
+<!-- <style> -->
+<!-- #columnscroller .step { -->
+<!--   background-color: #ccc; -->
+<!--   color: black; -->
+<!--   height: 200px; -->
+<!--   text-align: center; -->
+<!--   padding: 20px; -->
+<!--   transition: background-color 0.5s, color 0.5s, transform 0.5s; -->
+<!-- } -->
+<!-- /* here's how each box will look as we scroll past it */ -->
+<!-- #columnscroller .step.is-active { -->
+<!--   background-color: #5500cc; -->
+<!--   color: white; -->
+<!--   transform: rotate(1.25deg) scale(1.05); -->
+<!-- } -->
+<!-- </style> -->
+<!-- ``` -->
+<!-- :::: {#columnscroller} -->
+<!-- ::: {.step style="margin-bottom: 100px;"} -->
+<!-- Here's our first box! -->
+<!-- ::: -->
+<!-- ::: {.step style="margin-bottom: 100px;"} -->
+<!-- And our second box! -->
+<!-- ::: -->
+<!-- ::: {.step} -->
+<!-- And a third, I guess. -->
+<!-- ::: -->
+<!-- :::: -->
+<!-- ## Review -->
+<!-- This works nicely! -->
+<!-- If you open your browser's developer tools (Cmd+Opt+I on a Mac or Ctrl+Alt+I on Windows) and go to the Console pane, you can see it log the `response `object every time one of our event handlers fires (because an element scrolls into or out of view). Those are the `console.log` functions above. -->
+<!-- The `response` object that we're printing shows all the information we get when these event handlers fire.That includes not just the element being targeted, but also its index (TODO - is this its DOM order compared to similarly targeted things?) and the direction (`"up"` or `"down"`) by which it's exiting. -->
+<!-- You could theoretically use these event handlers, `onStepEnter` and `onStepExit`, to do anything. You could have the boxes being detected be invisible, for example, and just use them as trigger points - the actual thing being modified could be sticky and sitting at the top. -->
+<!-- TODO - Let's see how well that works with our two-column example from before. -->
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
