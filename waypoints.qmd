@@ -1,0 +1,75 @@
+---
+format: html
+---
+
+```{=html}
+<script src="/lib/noframework.waypoints.min.js"></script>
+
+<style>
+#overflow-scroll {
+  overflow:scroll;
+  height:300px;
+  background:#aaa;
+}
+
+#context-example {
+  background:#555;
+  color:#fff;
+  height:600px;
+  margin-top:150px;
+}
+</style>
+
+<script type="text/javascript">
+var waypoint = new Waypoint({
+  element: document.getElementById('basic-waypoint'),
+  handler: function() {
+    notify('Basic waypoint triggered')
+  }
+})
+</script>
+```
+
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+
+:::{#basic-waypoint}
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+:::
+
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.v
+
+
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+
+v
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.
+
+You may notice the basic example above triggers when we scroll through the waypoint both downwards and upwards. What if we want to perform different actions when scrolling up, or limit our handler to one direction? When a waypoint is triggered, the handler function is passed a direction parameter.

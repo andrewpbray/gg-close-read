@@ -1,0 +1,193 @@
+---
+format: 
+  html:
+    theme:
+      - sandstone
+      - custom.scss
+    fontcolor: black
+    backgroundcolor: white
+    page-layout: full
+execute: 
+  echo: false
+---
+
+::::: {.columns .column-page}
+
+:::: {.column width=35%}
+
+# A Grammar of Graphics
+
+## A close read of a scatterplot
+
+[By Andrew Bray]{style="font-size: .7em"}
+
+:::{}
+\
+:::
+
+What a lovely graphics this is,
+
+:::{.step data-img="url(pic2.png)" data-color="blue" data-src="https://rstudio-conf-2022.github.io/rmd-to-quarto/materials/3-computation/slides/computation.html#/generalizing-the-code-chunk-2"}
+with its three colors
+:::
+
+:::{.step data-img="url(pic2.png)" data-color="green"}
+and dots all over the place.
+:::
+
+I wonder: how was this made?
+
+::::
+
+:::: {.column width="10%"}
+::::
+
+:::: {.column .sticky-thing width="55%"}
+
+<iframe id="slide" src="https://rstudio-conf-2022.github.io/rmd-to-quarto/materials/3-computation/slides/computation.html#/generalizing-the-code-chunk-1" height=900 width=1600></iframe>
+
+
+```{r}
+#| echo: false
+#| eval: false
+#| warning: false
+
+library(tidyverse)
+library(palmerpenguins)
+
+ggplot(penguins, aes(x = bill_length_mm,
+                     y = flipper_length_mm,
+                     color = species)) +
+  geom_point() +
+  labs(x = "Bill Length",
+       y = "Flipper Length",
+       Species = "Species")
+```
+::::
+:::::
+
+```{=html}
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Scrollama: Sticky Overlay Example</title>
+    <meta name="description" content="Scrollama: Sticky Overlay Example" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      #scrolly {
+        position: relative;
+        background-color: #f3f3f3;
+        padding: 1rem;
+      }
+
+      article {
+        position: relative;
+        padding: 0;
+        max-width: 20rem;
+        margin: 0 auto;
+      }
+
+      .sticky-thing {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        z-index: 0;
+        top: 12.5vh;
+        /* Center everything inside */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .sticky-thing p {
+        font-size: 8rem;
+        font-weight: 900;
+        color: #fff;
+      }
+      
+      
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section id="intro">
+        <h1 class="intro__hed">Sticky Overlay Example</h1>
+        <p class="intro__dek">
+          Start scrolling to see how it works.
+        </p>
+      </section>
+
+      <section id="scrolly">
+        <div class="sticky-thing">
+          <p>0</p>
+        </div>
+
+        <article>
+          <div class="step" data-step="123">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div class="step" data-step="223">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div class="step" data-step="323">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div class="step" data-step="423">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </article>
+      </section>
+
+      <section id="outro"></section>
+    </main>
+
+    <!-- <div class='debug'></div> -->
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script>
+      var main = document.querySelector("main");
+      var scrolly = main.querySelector("#scrolly");
+      var sticky = scrolly.querySelector(".sticky-thing");
+      var article = scrolly.querySelector("article");
+      var steps = article.querySelectorAll(".step");
+
+      // initialize the scrollama
+      var scroller = scrollama();
+
+      // scrollama event handlers
+      function handleStepEnter(response) {
+        // response = { element, direction, index }
+        var el = response.element;
+        console.log(el);
+
+        // update graphic based on step
+        sticky.querySelector("p").innerText = el.dataset.img;
+        sticky.style.backgroundColor = el.dataset.color;
+      }
+
+      function init() {
+        // 2. setup the scroller passing options
+        // 		this will also initialize trigger observations
+        // 3. bind scrollama event handlers (this can be chained like below)
+        scroller
+          .setup({
+            step: ".step",
+            offset: 0.33,
+            debug: true
+          })
+          .onStepEnter(handleStepEnter);
+
+        // setup resize event
+        window.addEventListener("resize", scroller.resize);
+      }
+
+      // kick things off
+      init();
+    </script>
+  </body>
+
+```
