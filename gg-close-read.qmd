@@ -2,7 +2,6 @@
 format: 
   html:
     theme:
-      - sandstone
       - custom.scss
     fontcolor: black
     backgroundcolor: white
@@ -269,5 +268,6 @@ ggplot(penguins, aes(x = bill_length_mm,
 
 ::::
 :::::
+
 
 # El Fin
