@@ -16,17 +16,3 @@ p {
 h3 {
   margin-top: 15vh; /* for new sections */
 }
-
-#columnscroller .step {
-  background-color: #ccc;
-  color: black;
-  height: 200px;
-  text-align: center;
-  padding: 20px;
-  transition: background-color 0.5s, color 0.5s, transform 0.5s;
-}
-
-/* here's how each box will look as we scroll past it */
-#columnscroller .step.is-active {
-  background-color: #5500cc;
-}
