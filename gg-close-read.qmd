@@ -27,7 +27,7 @@ execute:
 \
 :::
 
-What a lovely graphics this is,
+What a lovely graphic this is,
 
 with its three colors
 
@@ -43,7 +43,8 @@ I wonder: how was this made? Let's walk through this step by step, starting with
 :::: {.column width="55%" style="padding:20px; position:sticky;top:30vh;"}
 
 ```{r}
-#| include: false
+#| echo: false
+#| message: false
 
 library(tidyverse)
 library(palmerpenguins)
@@ -127,7 +128,7 @@ We can see that we have a bump in the road ahead! At least one of these rows has
 :::: {.column width="10%"}
 ::::
 
-:::: {.column width="55%" #columnscroller style="padding:20px; position:sticky;top:20vh;"}
+:::: {.column width="55%" style="padding:20px; position:sticky;top:20vh;"}
 
 ```{r}
 #| echo: false
@@ -154,7 +155,7 @@ You can lay down a blank sheet of paper by calling the `ggplot()` function in th
 :::: {.column width="10%"}
 ::::
 
-:::: {.column width="55%" #columnscroller style="padding:20px; position:sticky;top:20vh;"}
+:::: {.column width="55%" style="padding:20px; position:sticky;top:20vh;"}
 
 ```{r}
 #| echo: true
@@ -187,7 +188,7 @@ This plot still looks quite bare. Where is the data?
 :::: {.column width="10%"}
 ::::
 
-:::: {.column width="55%" #columnscroller style="padding:20px; position:sticky;top:10vh;"}
+:::: {.column width="55%" style="padding:20px; position:sticky;top:10vh;"}
 
 ```{r}
 #| echo: true
@@ -216,7 +217,7 @@ What's lacking is some polish.
 :::: {.column width="10%"}
 ::::
 
-:::: {.column width="55%" #columnscroller style="padding:20px; position:sticky;top:10vh;"}
+:::: {.column width="55%" style="padding:20px; position:sticky;top:10vh;"}
 
 ```{r}
 #| echo: true
@@ -249,7 +250,7 @@ The last piece to fix up was those labels. By default, the column names will sho
 :::: {.column width="10%"}
 ::::
 
-:::: {.column width="55%" #columnscroller style="padding:20px; position:sticky;top:7vh;"}
+:::: {.column width="55%" style="padding:20px; position:sticky;top:7vh;"}
 
 ```{r}
 #| echo: true
