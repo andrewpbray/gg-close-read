@@ -46,6 +46,9 @@ I wonder: how was this made? Let's walk through this step by step, starting with
 #| eval: true
 #| warning: false
 
+library(ggplot2)
+library(palmerpenguins)
+library(dplyr)
 ggplot(penguins, aes(x = bill_length_mm,
                      y = flipper_length_mm,
                      color = species)) +
